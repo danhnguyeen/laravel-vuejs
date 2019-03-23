@@ -5,6 +5,7 @@ namespace CMSTutorial\Http\Controllers\Auth;
 use CMSTutorial\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
 use Illuminate\Http\Request;
+use CMSTutorial\Exceptions\AuthFailedException;
 
 class LoginController extends Controller
 {
@@ -59,5 +60,18 @@ class LoginController extends Controller
     {
         // return redirect('/home');
         return 1;
+    }
+
+    /**
+     * Get the failed login response instance.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @return \Symfony\Component\HttpFoundation\Response
+     *
+     * @throws \Illuminate\Validation\ValidationException
+     */
+    protected function sendFailedLoginResponse(Request $request)
+    {
+        throw new AuthFailedException;
     }
 }
