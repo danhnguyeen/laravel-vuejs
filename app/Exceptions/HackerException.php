@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Exceptions;
+namespace CMSTutorial\Exceptions;
 
 use Exception;
 use Log;

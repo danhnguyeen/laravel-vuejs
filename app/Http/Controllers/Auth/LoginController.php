@@ -1,8 +1,8 @@
 <?php
 
-namespace App\Http\Controllers\Auth;
+namespace CMSTutorial\Http\Controllers\Auth;
 
-use App\Http\Controllers\Controller;
+use CMSTutorial\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
 use Illuminate\Http\Request;
 
@@ -57,6 +57,7 @@ class LoginController extends Controller
      */
     protected function authenticated(Request $request, $user)
     {
-        return redirect('/home');
+        // return redirect('/home');
+        return 1;
     }
 }

@@ -1,9 +1,9 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace CMSTutorial\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Post;
+use CMSTutorial\Post;
 use Exception;
 
 class PostController extends Controller

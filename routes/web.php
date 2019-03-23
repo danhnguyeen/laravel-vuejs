@@ -13,17 +13,21 @@ use App\Exceptions\HackerException;
 | contains the "web" middleware group. Now create something great!
 |
 */
-Route::get('/', function () {
-  return view('welcome');
-});
-// Test 
-Route::get('/about', function () {
-  return view('about');
-});
-Route::get('/posts', 'PostController@index');
-Route::get('/create-post', 'PostController@create');
-Route::get('/post/{id}', 'PostController@details');
-Route::post('/posts', 'PostController@store')->name('post.create');
+
+
+
+
+// Route::get('/', function () {
+//   return view('welcome');
+// });
+// // Test 
+// Route::get('/about', function () {
+//   return view('about');
+// });
+// Route::get('/posts', 'PostController@index');
+// Route::get('/create-post', 'PostController@create');
+// Route::get('/post/{id}', 'PostController@details');
+// Route::post('/posts', 'PostController@store')->name('post.create');
 // Exception
 // Route::get('/', function () {
 //     throw new HackerException('afe');
@@ -42,4 +46,7 @@ Route::post('/posts', 'PostController@store')->name('post.create');
 
 Auth::routes();
 
+// Vue
+Route::get('/', 'FrontendController@welcome');
 Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/logout', function(){ auth()->logout();});

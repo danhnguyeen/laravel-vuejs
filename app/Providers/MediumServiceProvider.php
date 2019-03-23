@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Providers;
+namespace CMSTutorial\Providers;
 
 use Illuminate\Support\ServiceProvider;
 use JonathanTorres\MediumSdk\Medium;

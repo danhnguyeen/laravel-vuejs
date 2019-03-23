@@ -1,6 +1,6 @@
 <?php
 
-namespace App;
+namespace CMSTutorial;
 
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
@@ -38,6 +38,6 @@ class User extends Authenticatable
     ];
 
     public function post() {
-        return $this->hasOne('App\Post');
+        return $this->hasOne('CMSTutorial\Post');
     }
 }
